@@ -2,10 +2,10 @@
 Use a MIDI controller device as a launchpad for apps or any commands, or a streaming deck.
 
 ## Use case
-There is a Behringer Xtouch Mini controller with buttons, pots and LEDs. I am using it as a launchpad for various tasks at my computer:
+[Behringer Xtouch Mini controller] (https://www.behringer.com/product.html?modelCode=P0B3M) is a nice and responsive MIDI device with a slider, buttons, pots and LEDs. I am using it as a launchpad for various tasks at my computer:
 
 * Selecting audio sources - speakers, headphones, playback and pause, volume control
-* Controlling OBS: start, pause and stop recording.
+* Controlling [OBS](https://obsproject.com/): start, pause and stop recording.
 * Selecting scenes in OBS.
 * Controlling color temperature for my webcam it real time
 * Launching arbitrary commands and programs
