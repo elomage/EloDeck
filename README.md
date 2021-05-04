@@ -20,6 +20,14 @@ This project is written in Python for Linux environment and takes a configuratio
 
 The project is monitoring system for USB Midi device connections. You can specify which device to monitor. If the device gets reconnected, the program monitor the system events for reconnection of any MIDI device and restarts the process as soon as the device is connected again.
 
+## Support
+
+Currently I have added support for the following MIDI controllers:
+* [Behringer Xtouch Mini controller](https://www.behringer.com/product.html?modelCode=P0B3M)
+* [Akai LPD8](https://www.akaipro.com/lpd8)
+
+Send me a device and I will add support for it :)
+
 ## License
 
 This project is under MIT license.
