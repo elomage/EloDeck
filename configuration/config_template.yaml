@@ -1,0 +1,67 @@
+# Configuration file for EloDeck midi controller and actions
+
+# MIDI messages - inseart the appropriate MIDI device configuration here
+
+#...
+
+
+# How to create IDs for the actions: 
+# Each ID is 4 characters: Mode.type.[col].[row]
+# Mode is the mode ID: A,B... or X for any mode
+# Type: B=button, S=slider, R=rotary
+# No col means the first column. No row means the first row.
+# Examples: 
+#   Mode A top left button = AB11
+#   Mode A second row third button = AB23
+#   Mode B third rotary = BR3
+#   Mode any, the only slider (or the first)  = XS
+#   Mode B first row (default, ommitted) fifteenth button = ABF
+
+# For the Pot commands, must specify values: min, max, step=1, placeholder={} 
+# and the command with the placeholder that will be replaced with the current value.
+# Parameter rate=0.2 defines time in seconds how often can we call the command.
+
+# Command parameters:
+#   cmd:    the command to be executed
+#   print:  print a message to the console (or notification)
+#   midi:   send a MIDI command to this controller. 
+#           This could be either a list of byte values or string of hex values.
+#   up:     Actions to perform when the button is released rather than pressed down
+#           This is a dictionary of parameters just like for the command.
+#           This could be useful to trigger the LED action for the same button.
+
+
+actions:
+  # Assign slider to volume control in any mode
+  XS: Volume
+
+  # Exit the controller program on button 18 (row 1 col 8)
+  XB18: Exit
+
+  # Mute audio on button 25 in any mode
+  XB25: "amixer -D pulse sset Master toggle"  # Mute
+
+  # Control the playback with "audacious" program, Buttons 37, 33, 34 in mode A
+  AB37: "audacious -t"  # Pause Music
+  AB33: "audacious -r"  # <<
+  AB34: "audacious -f"  # >>
+
+  # Run a command on button 21 in mode A
+  AB21: 
+    cmd: "/usr/bin/gedit"
+    print: "Run gedit"
+
+  # Print a message on button 22 in mode B
+  BB22: 
+    print: "Nop command"
+  
+  # Test sending MIDI command to the controller - Turn LED on on button-up event
+  AB21:   
+    print: Test1dn
+    up:
+      print: Test1up
+      midi: "900002"    # Give MIDI message as a hex string
+  # Test sending MIDI command to the controller - Turn LED off on button-down event
+  AB22: 
+    midi: [0x90, 0, 0]  # Give MIDI message as a list of byte values
+    print: Test2
