@@ -2,7 +2,8 @@
 Use a MIDI controller device as a launchpad for apps or any commands, or a streaming deck.
 
 ## Use case
-[Behringer Xtouch Mini controller](https://www.behringer.com/product.html?modelCode=P0B3M) is a nice and responsive MIDI device with a slider, buttons, pots and LEDs. 
+[Behringer Xtouch Mini controller](https://www.behringer.com/product.html?modelCode=P0B3M) is a nice and responsive MIDI device with a slider, buttons, pots and LEDs.
+
 <img src="https://mediadl.musictribe.com/media/PLM/data/images/products/P0B3M/2000Wx2000H/X-TOUCH-MINI_P0B3M_Top_XL.png" width="50%">
 
 I am using it as a launchpad for various tasks at my computer:
