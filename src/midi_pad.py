@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-# MIDI pad controller - launcher.
+# EloDeck: MIDI pad controller - launcher.
 # Configure the hardware and commands in config.yaml
 #
 # Author: Leo Selavo
@@ -277,6 +277,8 @@ def is_midi_device(dev_path):
     if dev_path is None: 
         return False
     if re.match(u"^/dev/midi[0-9]+$", dev_path):
+        return True
+    if re.match(u"^/dev/midi$", dev_path):
         return True
     return False
 
