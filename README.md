@@ -1,5 +1,5 @@
 # EloDeck
-Use a MIDI controller device as a launchpad for apps or any commands, or a streaming deck.
+Use a MIDI controller device as a launchpad for apps or any commands, or a streaming deck.Using EloDeck one can configure the MIDI controller knobs and buttons and use it to launch programms or actions.
 
 ## Use case
 [Behringer Xtouch Mini controller](https://www.behringer.com/product.html?modelCode=P0B3M) is a nice and responsive MIDI device with a slider, buttons, pots and LEDs.
